@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import chatMessages from './data/messages.json';
+import ChatLog from './components/ChatLog';
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
           <h1 className="App-title">Application title</h1>
         </header>
         <main className="App-main">
-
+            <ChatLog messages={chatMessages}/>
         </main>
       </div>
     );

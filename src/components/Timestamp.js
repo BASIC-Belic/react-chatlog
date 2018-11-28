@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 const Timestamp = (props) => {
@@ -9,5 +10,9 @@ const Timestamp = (props) => {
   return <span title={absolute}>{relative}</span>;
 };
 
+
+Timestamp.propTypes = {
+  time: PropTypes.string
+};
 
 export default Timestamp;
