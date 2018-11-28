@@ -11,7 +11,7 @@ const ChatLog = (props) => {
   });
 
   return (
-    <section>
+    <section className="chat-log">
     {messages}
     </section>
   )

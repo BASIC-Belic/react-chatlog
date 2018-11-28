@@ -4,14 +4,17 @@ import Timestamp from './Timestamp';
 
 const ChatMessage = (props) => {
 
+const name = props.sender === 'Estragon' ? 'chat-entry.local' : 'chat-entry.remote';
+
   return (
-    <section>
-      <div>{props.sender}</div>
-      <div>{props.body}</div>
-      <div>{<Timestamp time={props.timeStamp}/>}</div>
+    <section className={name}>
+      <p className="entry-name">{props.sender}</p>
+      <div className="entry-bubble">
+      <p className="entry-body">{props.body}</p>
+      <p className="entry-time">{<Timestamp time={props.timeStamp}/>}</p>
+      </div>
     </section>
   )
-
 };
 
 ChatMessage.propTypes = {
@@ -20,7 +23,6 @@ ChatMessage.propTypes = {
   time: PropTypes.string
 };
 
-//this goes into student, not counted as modified, just shows up
 // ChatMessage.defaultProps = {
 // }
 
