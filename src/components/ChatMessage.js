@@ -4,7 +4,7 @@ import Timestamp from './Timestamp';
 
 const ChatMessage = (props) => {
 
-const name = props.sender === "Estragon" ? "chat-entry local" : "chat-entry remote";
+const name = props.sender === "Estragon" ? "chat-entry remote" : "chat-entry local";
 
   return (
     <section className={name}>
