@@ -4,7 +4,7 @@ import Timestamp from './Timestamp';
 
 const ChatMessage = (props) => {
 
-const name = props.sender === 'Estragon' ? 'chat-entry.local' : 'chat-entry.remote';
+const name = props.sender === "Estragon" ? "chat-entry local" : "chat-entry remote";
 
   return (
     <section className={name}>
@@ -16,6 +16,7 @@ const name = props.sender === 'Estragon' ? 'chat-entry.local' : 'chat-entry.remo
     </section>
   )
 };
+
 
 ChatMessage.propTypes = {
   sender: PropTypes.string.isRequired,
